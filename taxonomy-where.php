@@ -174,54 +174,43 @@ $glanceInfo = get_sub_field('information', $term);
     </div>
     
   </div><!--row-->    
+ 
+  <div class="layoutBlock wrapper__cardCamp mt1">
+  <div class="row"><!--Itinierary Block -->
   
-  <div class="row">
-    <div class="col-lg-12">
-      <h2 class="headingSupporting headingSupporting__lg mb1">Accommodation<br/> in <?php echo $term->name; ?></h2>         
+  	<?php $post_objects = get_field('featured_itineraries', $term); ?>
+  
+  		<?php if( $post_objects ): ?>
+  
+    <div class="col-lg-3 col-sm-6">
+      <h2 class="headingSupporting headingSupporting__lg mb1">Itineraries featuring <?php echo $term->name; ?></h2>
     </div>
-  </div><!--row-->  
-     
-   <div class="layoutBlock wrapper__cardCamp mt1">
+  </div><!--r-->
+  <div class="row">
   
-    <div class="row"><!--Camps block -->
-
-
-      <?php $campterm = get_queried_object(); 
-        $loop = new WP_Query(
-            array(
-              'post_type' 	 => 'camp',
-              'orderby' 		 => 'name',
-              'order'   		 => 'ASC',
-              'tax_query' => array(
-              array(
-              'taxonomy' => 'where',
-              'field'    => 'slug',
-              'terms'    => $campterm->slug,
-            ),
-          )
-        )
-      );
+  					    <?php foreach( $post_objects as $post): 
+    					        setup_postdata($post); 
+    					        $leaderImg = get_field('leader_image');
+  					    ?>
   
-      if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
-      $campImg = get_field('leader_image');?>  
-         
-        <div class="col-lg-3 col-sm-6">
-          <a href="<?php the_permalink() ?>">
-            <div class="cardCamp" style="background-image: url(<?php echo $campImg['url']; ?>);">
-              <div class="highlightBorderH"></div>
-              <div class="highlightBorderV"></div>
-              <h3 class="headingSupporting headingSupporting__md cardCamp__heading"><?php the_title() ?></h3>
-            </div><!--cardCamp-->
-            </a>
-      </div>
   
-      <?php endwhile; endif; ?>
-    </div><!--row-->
+          <div class="col-lg-3 col-6">
+            <a href="<?php the_permalink() ?>">
+              
+              <div class="cardCamp" style="background-image: url(<?php echo $leaderImg['url']; ?>);">
+                <div class="highlightBorderH"></div>
+                <div class="highlightBorderV"></div>
+                <h3 class="headingSupporting headingSupporting__md cardCamp__heading"><?php the_title() ?></h3>
+              </div><!--cardCamp-->
+              </a>
+        </div>
   
-  </div>    
-
-
-
+  
+  					    <?php endforeach; ?>
+  		<?php endif; ?>
+  
+  </div><!--r-->
+</div>
 
 </div><!--container-->
 
@@ -279,51 +268,42 @@ $glanceInfo = get_sub_field('information', $term);
     
   </div><!--row-->    
 
-  <div class="row">
-    <div class="col-lg-12">
-      <h2 class="headingSupporting headingSupporting__lg mb1">Accommodation<br/> in <?php echo $term->name; ?></h2>         
+  <div class="layoutBlock wrapper__cardCamp mt1">
+  <div class="row"><!--Itinierary Block -->
+  
+  	<?php $post_objects = get_field('featured_itineraries', $term); ?>
+  
+  		<?php if( $post_objects ): ?>
+  
+    <div class="col-lg-3 col-sm-6">
+      <h2 class="headingSupporting headingSupporting__lg mb1">Itineraries featuring <?php echo $term->name; ?></h2>
     </div>
-  </div><!--row-->  
-
- <div class="layoutBlock wrapper__cardCamp mt1">
+  </div><!--r-->
+  <div class="row">
   
-    <div class="row"><!--Camps block -->
-
-
-      <?php $campterm = get_queried_object(); 
-        $loop = new WP_Query(
-            array(
-              'post_type' 	 => 'camp',
-              'orderby' 		 => 'name',
-              'order'   		 => 'ASC',
-              'tax_query' => array(
-              array(
-              'taxonomy' => 'where',
-              'field'    => 'slug',
-              'terms'    => $campterm->slug,
-            ),
-          )
-        )
-      );
+  					    <?php foreach( $post_objects as $post): 
+    					        setup_postdata($post); 
+    					        $leaderImg = get_field('leader_image');
+  					    ?>
   
-      if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
-      $campImg = get_field('leader_image');?>  
-      
-        <div class="col-lg-3  col-sm-6">
-          <a href="<?php the_permalink() ?>">
-            <div class="cardCamp" style="background-image: url(<?php echo $campImg['url']; ?>);">
-              <div class="highlightBorderH"></div>
-              <div class="highlightBorderV"></div>
-              <h3 class="headingSupporting headingSupporting__md cardCamp__heading"><?php the_title() ?></h3>
-            </div><!--cardCamp-->
-            </a>
-      </div>
   
-      <?php endwhile; endif; ?>
-    </div><!--row-->
+          <div class="col-lg-3 col-6">
+            <a href="<?php the_permalink() ?>">
+              
+              <div class="cardCamp" style="background-image: url(<?php echo $leaderImg['url']; ?>);">
+                <div class="highlightBorderH"></div>
+                <div class="highlightBorderV"></div>
+                <h3 class="headingSupporting headingSupporting__md cardCamp__heading"><?php the_title() ?></h3>
+              </div><!--cardCamp-->
+              </a>
+        </div>
   
-  </div>    
-
+  
+  					    <?php endforeach; ?>
+  		<?php endif; ?>
+  
+  </div><!--r-->
+</div>
 
 <div class="row"><!-- CTA Itinerary Block-->
   
