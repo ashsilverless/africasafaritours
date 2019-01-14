@@ -107,44 +107,40 @@ if( $images ): ?>
 </div><!--row-->
 </div>
 
+<div class="layoutBlock wrapper__cardCamp mt1">
+  <div class="row"><!--Combines Block -->
 
- <div class="layoutBlock wrapper__cardCamp mt1">
-<div class="row"><!--Combines Block -->
+    <?php $post_objects = get_field('combines'); ?>
+    
+    <?php if( $post_objects ): ?>
 
-	<?php $post_objects = get_field('combines'); ?>
+    <div class="col-lg-12">
+      <h2 class="headingSupporting headingSupporting__lg mb1">Combines Well With</h2>
+    </div>
 
-		<?php if( $post_objects ): ?>
-
-  <div class="col-lg-12">
-    <h2 class="headingSupporting headingSupporting__lg mb1">Combines Well With</h2>
-  </div>
-
-					    <?php foreach( $post_objects as $post): 
-  					        setup_postdata($post); 
-  					        $leaderImg = get_field('leader_image', $term);
-					    ?>
-
-
-        <div class="col-lg-3 col-6">
-          <a href="<?php the_permalink() ?>">
-            
-            <div class="cardCamp" style="background-image: url(<?php echo $leaderImg['url']; ?>);">
-              <div class="highlightBorderH"></div>
-              <div class="highlightBorderV"></div>
-              <h3 class="headingSupporting headingSupporting__md cardCamp__heading"><?php the_title() ?></h3>
-            </div><!--cardCamp-->
-            </a>
-      </div>
+				    <?php foreach( $post_objects as $post): 
+					        setup_postdata($post); 
+					        $leaderImg = get_field('leader_image', $term);
+				    ?>
 
 
-					    <?php endforeach; ?>
-		<?php endif; ?>
+      <div class="col-lg-3 col-6">
+        <a href="<?php the_permalink() ?>">
+          
+          <div class="cardCamp" style="background-image: url(<?php echo $leaderImg['url']; ?>);">
+            <div class="highlightBorderH"></div>
+            <div class="highlightBorderV"></div>
+            <h3 class="headingSupporting headingSupporting__md cardCamp__heading"><?php the_title() ?></h3>
+          </div><!--cardCamp-->
+          </a>
+    </div>
+
+
+				    <?php endforeach; ?>
+	<?php endif; ?>
 
 </div><!--r-->
- </div>
-
-
-
+</div>
 
 <div class="row"><!-- CTA Itinerary Block-->
   
