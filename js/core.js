@@ -128,6 +128,27 @@ $('.expand-form').click(function() {
       $('.first-submit').hide();    
 });
 
+$('.filterType').click(function() {
+  $(this).addClass('active');
+  $( '.filterLocation' ).removeClass( "active" );    
+  $( '.typeFilter' ).addClass( "reveal" );  
+  $( '.locationFilter' ).removeClass( "reveal" );  
+});
+
+$('.filterLocation').click(function() {
+  $(this).addClass('active');
+  $( '.filterType' ).removeClass( "active" );    
+  $( '.typeFilter' ).removeClass( "reveal" );  
+  $( '.locationFilter' ).addClass( "reveal" );  
+});
+
+
+
+$('.filterLocation').click(function() {
+  $( '.typeFilter' ).removeClass( "reveal" );  
+  $( '.locationFilter' ).addClass( "reveal" );  
+});
+
 // ========== Controller for lightbox elements
 
 $(document).ready(function() {
@@ -140,82 +161,33 @@ $('.camp-gallery').magnificPopup({
   });
 });
 
+// ========== Filtering controller (mixitup)
+
 if($('#mixitup-camps').length) {
 
-                var campsMixer = mixitup('#mixitup-camps', {
-                    load: {
-                        filter: 'all'
-                    },
-                    selectors: {
-                        control: '.mixitup-control'
-                    },
-                    pagination: {
-                        limit: 6,
-                        maintainActivePage: false,
-                        loop: true,
-                        hidePageListIfSinglePage: true
-                    },
-                    callbacks: {
-                        onMixEnd: function() {
-                            jQuery(window).trigger('resize').trigger('scroll');
-                        }
-                    }
-                });
-            }
+  var campsMixer = mixitup('#mixitup-camps', {
+      load: {
+          filter: 'all-locs',
+          filter: 'all-types'
+      },
+      selectors: {
+          control: '.mixitup-control'
+      },
+      pagination: {
+          limit: 99,
+          maintainActivePage: false,
+          loop: true,
+          hidePageListIfSinglePage: true
+      },
+      callbacks: {
+          onMixEnd: function() {
+              jQuery(window).trigger('resize').trigger('scroll');
+          }
+      }
+  });
+  
+}
 
-            if($('#mixitup-camps-villas').length) {
-
-                var campsVillasMixer = mixitup('#mixitup-camps-villas', {
-                    load: {
-                        filter: 'all'
-                    },
-                    selectors: {
-                        control: '.mixitup-control'
-                    },
-                    pagination: {
-                        limit: 18,
-                        maintainActivePage: false,
-                        loop: true,
-                        hidePageListIfSinglePage: true
-                    },
-                    callbacks: {
-                        onMixEnd: function() {
-                            jQuery(window).trigger('resize').trigger('scroll');
-                        }
-                    }
-                });
-            }
-
-            if($('#mixitup-posts-from-past').length) {
-
-                var postMixer = mixitup('#mixitup-posts-from-past', {
-                    load: {
-                        filter: 'all'
-                    },
-                    selectors: {
-                        control: '.mixitup-control'
-                    },
-                    pagination: {
-                        limit: 6,
-                        maintainActivePage: false,
-                        loop: true,
-                        hidePageListIfSinglePage: true
-                    },
-                    callbacks: {
-                        onMixEnd: function() {
-                            jQuery(window).trigger('resize').trigger('scroll');
-                        }
-                    }
-                });
-            }
-
-
-
-
-
-
-
- 
 });//Don't remove ---- end of jQuery wrapper
 
 $(document).ready(function(){
