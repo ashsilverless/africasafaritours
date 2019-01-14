@@ -87,7 +87,7 @@ function type_cpt_taxonomy() {
   }
   
   /*
-// ========= Itinerary Custom Taxonomies (where) ============
+// ========= Itinerary Custom Taxonomies (where, type) ============
 */	
 // ======Itinerary Locations
 add_action( 'init', 'itin_location_cpt_taxonomy', 0 );
@@ -117,7 +117,33 @@ function itin_location_cpt_taxonomy() {
   ));
 }
   
-  
+// ======Itinerary Types
+add_action( 'init', 'itin_type_cpt_taxonomy', 0 );
+function itin_type_cpt_taxonomy() {
+ 
+  $labels = array(
+    'name' => _x( 'Itinerary Type', 'taxonomy general name' ),
+    'singular_name' => _x( 'Itinerary Type', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Itinerary Types' ),
+    'all_items' => __( 'All Itinerary Types' ),
+    'parent_item' => __( 'Itinerary Parent Type' ),
+    'parent_item_colon' => __( 'Itinerary Parent Type:' ),
+    'edit_item' => __( 'Edit Itinerary Type' ), 
+    'update_item' => __( 'Update Itinerary Type' ),
+    'add_new_item' => __( 'Add New Itinerary Type' ),
+    'new_item_name' => __( 'New Itinerary Type Name' ),
+    'menu_name' => __( 'Itinerary Types' ),
+  ); 	
+ 
+  register_taxonomy('itinerarytype',array('itinerary'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'itinerarytype', 'hierarchical' => true ),
+  ));
+}
   
   
   

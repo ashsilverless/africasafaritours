@@ -18,8 +18,14 @@ get_header();?>
   
   </div><!-- r-->
 
-  <div class="controls text-center mb2">  
-    <a class="control <?php if($term->slug == get_queried_object()->slug) { echo ' active'; } ?> filter__item filter__item--root" data-filter="all">All</a>
+  <div id="mixitup-camps" class="controls text-center mb3">  
+    
+    <a class="button button__filter filterLocation active"><span>Filter By</span>Location</a>   
+        
+    <a class="button button__filter filterType"><span>Filter By</span>Type</a>       
+ 
+    <div class="locationFilter reveal">
+      <a class="control <?php if($term->slug == get_queried_object()->slug) { echo ' active'; } ?> filter__item filter__item--root" data-filter="all">All</a>
               
 <?php 
   $terms = get_terms( 'itinerarywhere' );
@@ -40,13 +46,45 @@ get_header();?>
       if( $single_filter->parent == 0 ) : 
 ?>
   
-    <a class="control <?php echo $single_filter->slug; ?><?php if($single_filter->slug == get_queried_object()->slug) { echo ' active'; } ?> filter__item" data-filter=".<?php echo $single_filter->slug; ?>"><?php echo $single_filter->name; ?></a>
+      <a class="control <?php echo $single_filter->slug; ?><?php if($single_filter->slug == get_queried_object()->slug) { echo ' active'; } ?> filter__item" data-filter=".<?php echo $single_filter->slug; ?>"><?php echo $single_filter->name; ?></a>
               
  <?
   endif;
     endforeach; 
       endif; 
 ?>
+    </div><!--locationFilter-->
+
+    <div class="typeFilter">
+      <a class="control <?php if($term->slug == get_queried_object()->slug) { echo ' active'; } ?> filter__item filter__item--root" data-filter="all">All</a>
+              
+<?php 
+  $terms = get_terms( 'itinerarytype' );
+  $filters = array(); 
+  
+  //if ( ! empty( $terms ) && ! is_wp_error( $terms ) ): 
+  foreach ( $terms as $term ): 
+  
+  if (!in_array($term, $filters)) {
+  array_push($filters, $term);
+  } 
+  endforeach; 
+?>
+    
+<?php 
+  if( $filters ): 
+    foreach( $filters as $single_filter ): 
+      if( $single_filter->parent == 0 ) : 
+?>
+  
+      <a class="control <?php echo $single_filter->slug; ?><?php if($single_filter->slug == get_queried_object()->slug) { echo ' active'; } ?> filter__item" data-filter=".<?php echo $single_filter->slug; ?>"><?php echo $single_filter->name; ?></a>
+              
+ <?
+  endif;
+    endforeach; 
+      endif; 
+?>
+    </div><!--typeFilter-->
   
   </div>
   
@@ -63,19 +101,23 @@ if( $posts ): foreach( $posts as $post ):
   $nightNum = get_field( 'number_of_nights' );	
   $leaderImg = get_field('leader_image');			
   $leaderDesc = get_field('description');			
-	setup_postdata( $post ); 
+  setup_postdata( $post ); 
   $terms = get_the_terms( get_the_ID(), 'itinerarywhere' ); 
+  $itintypes = get_the_terms( get_the_ID(), 'itinerarytype' ); 
 ?>
 
-  <div class="col-md-6 mix <?php foreach( $terms as $term)  echo ' '.$term->slug;  ?>"  data-ref="mixitup-target" >
+
+
+  <div class="col-md-6 mix <?php foreach( $terms as $term)  echo ' '.$term->slug;?> <?php foreach( $itintypes as $itintype)  echo ' '.$itintype->slug;?>"  data-ref="mixitup-target" >
     <a href="<?php the_permalink(); ?>" class="cardItinerary" style="background-image: url(<?php echo $leaderImg['url']; ?>);">
       
   		<div class="meta">
   		  <p><?php echo $nightNum;?> Nights</p>
   		</div>
   		
-  		<div class="description">  				
-  			<h2 class="headingBrand headingBrand__md headingBrand__light mb1"><?php the_title(); ?></h2>
+  		<div class="description">
+
+    		<h2 class="headingBrand headingBrand__md headingBrand__light mb1"><?php the_title(); ?></h2>
   			<p><?php echo $leaderDesc;?></p>
   		</div>
   		
