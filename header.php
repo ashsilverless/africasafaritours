@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
   <div id="page" class="site-wrapper">
-  
+  <div>TEST FEATURE</div>
     <header>
   
       <div class="container">
