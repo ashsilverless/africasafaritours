@@ -1,0 +1,1 @@
+<div class="sl-divider" style="height:<?php the_sub_field('horizontal_divider');?>px;"></div>

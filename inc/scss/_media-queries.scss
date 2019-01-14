@@ -1,0 +1,329 @@
+/*! == MEDIA QUERIES == */
+
+/*===========LARGE (1200px)==========*/
+
+@media only screen and (max-width: 1200px) {
+/*body:before {
+  content: 'LARGE';
+  position: fixed;
+  z-index: 9999;
+  top:0;
+}*/
+ /*---GLOBALS---*/ 
+
+body {
+  font-size: 1.5rem;
+}  
+/*---HEADER---*/ 
+
+/*---CONTENT---*/
+
+/*---FOOTER---*/
+
+}/*---end large mq---*/
+
+
+/*===========MEDIUM (992px)==========*/
+
+@media only screen and (max-width: 992px) {
+/*  body:before {
+    content: 'MEDIUM';
+    position: fixed;
+    z-index: 9999;
+    top:0;
+  }*/
+  
+ /*---GLOBALS---*/ 
+ 
+ /*---HEADER---*/
+
+svg#vert-logo {
+  width: 90px;
+}  
+
+.navigation__panel__brand {
+  height: 70px;
+}
+
+/*---CONTENT---*/
+
+.gallery__item {
+  min-height: 10em;
+}
+
+ .cardCamp {
+  height: 15em;
+  } 
+
+.ctaPanel {
+  height: 15em;
+}
+
+.formWrapper .expand-form {
+  width: 45%;
+}
+/*---FOOTER---*/
+  
+}/*---end medium mq---*/
+
+
+
+/*===========SMALL (768px)==========*/
+
+@media only screen and (max-width: 768px) {
+/*  body:before {
+    content: 'SMALL';
+    position: fixed;
+    z-index: 9999;
+    top:0;
+  }*/
+
+/*---GLOBALS---*/
+
+body {
+  font-size: 1.6rem;
+}
+
+.headingBrand__xl {
+  font-size: 3em;
+}
+
+.headingBrand__lgPlus {
+  font-size: 2em;
+}
+
+.headingSupporting__lg {
+  font-size: 1em;
+  }
+
+.headingSupporting__sm {
+  font-size: 0.6em;
+}
+
+/*---HEADER---*/
+
+/*---CONTENT---*/
+  
+.cardMonth__home {
+  height: 10em;
+}  
+
+.gallery__item {
+  min-height: 7em;
+}
+
+.cardCta {
+  height: 15em;
+}
+ .cardCamp {
+  height: 15em;
+  margin-bottom: 1em;   
+ }
+ 
+.monthGrid__item {
+  min-height: 8em;
+} 
+
+.cardMonth {
+  width:50%;
+}
+
+/*---FOOTER---*/
+
+.socials {
+  text-align: center;
+}
+
+  
+}/*---end small mq---*/
+
+
+/*===========EXTRA SMALL (576px)==========*/
+
+@media only screen and (max-width: 576px) {
+/*  body:before {
+    content: 'EXTRA SMALL';
+    position: fixed;
+    z-index: 9999;
+    top:0;
+  }*/
+  
+/*---GLOBALS---*/
+  
+body {
+  font-size: 1.6rem;
+}
+
+.headingBrand__xl {
+  font-size: 2.5em;
+}
+
+.headingBrand__lgPlus {
+  font-size: 1.5em;
+}
+
+.headingBrand__md {
+  font-size: 1.2em;
+}
+
+.mb1-xs {
+  margin-bottom: 1em !important;
+}
+
+.mb2-xs {
+  margin-bottom: 1em !important;
+}
+
+.hide-xs {
+  display: none;
+}
+
+
+/*---HEADER---*/
+
+.header__trigger {
+  top: 0.6em;
+  }
+
+.topLevel img.horizontal {
+  top: 1.5em;
+  }
+
+svg#vert-logo {
+  width: 60px;
+}
+
+.header__brand img.horizontal {
+  width: 150px;
+}
+
+.navigation__panel {
+  grid-template-columns: 50% 0 44%;
+  grid-gap: 1em 0em;
+  &__promo {
+    display: none;
+  }
+}
+/*---CONTENT---*/
+
+.layoutBlock {
+  margin-bottom: 3em;
+}
+
+.banner {
+  height: 10em;
+  padding-bottom: 1em;
+}
+
+.gallery {
+  grid-template-columns: 25% 25% 25% 25%;
+  }
+
+.wrapper__cardCta {
+  grid-template-columns: 50% 50%;
+  }  
+
+.cardCta {
+  height: 10em;
+}
+
+.ctaPanel {
+  grid-template-columns: 100%;
+  &__topLeft,
+  &__bottomLeft,
+  &__bottomRight {
+  grid-column: span 1;
+  }
+  .button {
+    width:100%;
+  }
+}
+
+.filterCard {
+  height: 12em;
+}
+
+.monthGrid__item {
+  min-height: 6em;
+}
+
+.sidebarFeatures__feature {
+  text-align: left;
+  &:last-of-type{
+    margin-bottom:3em;
+  }
+}
+
+.monthGrid__item {
+  padding: 0.5em;
+  p {
+    font-size: 1em; 
+  }
+  }
+  
+.owl-carousel {
+  margin-top: 2em;
+}
+
+.planning-menu-class ul.menu {
+  padding: 0;
+  margin: 1em 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 0 0.3em;
+    i {
+      margin-right: 0.5em;
+      transform: rotate(90deg);
+      line-height: 1.5em;
+    }
+  }
+}
+
+.bio {
+  padding-left: 8em;
+  img {
+    max-width: 7em;  
+  }
+}
+
+.toggleWrapper {
+  margin-top: 1em;
+}
+  
+.toggle {
+  padding-left: 2em;
+}  
+
+.toggle__question i {
+  right: 0em;
+}
+
+.formWrapper .expand-form {
+  width: 44%;
+}
+  
+/*---FOOTER---*/
+
+.contactPanel__inner {
+  display: block;
+  &__tel {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+  &__email {
+    text-align: center;
+  }  
+}
+
+.footer__static {
+  height: 5em;
+  }
+
+footer.visible .contactPanel {
+  top: 1.5em;
+  }
+
+  
+}/*---end extra small mq---*/
+

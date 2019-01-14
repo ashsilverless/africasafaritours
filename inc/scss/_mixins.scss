@@ -1,0 +1,113 @@
+/*! == MIXINS == */
+
+@mixin fontsize($size) {
+  font-size: $size * 1px;
+  font-size: $size * 0.1rem;
+}
+
+@mixin psuedo {
+  content:'';
+  position: absolute;
+} 
+ 
+@mixin headingBrand {
+  margin: 0;
+  line-height: 1em;
+	font-family: $heading-font;
+	font-weight: 100;
+	letter-spacing: 0.1em;
+}
+
+@mixin headingSupporting {
+  margin: 0;
+  line-height: 1em;  
+	font-family: $body-font ;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+@mixin backgroundCover {
+	background-size: cover !important; /* !important added as result of rule not working inside display:grid */
+	background-position: center center !important;
+	background-repeat: no-repeat !important; 
+}
+
+@mixin childOverlay {
+  content:'';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+}
+
+@mixin fiftyHeight {
+	min-height: 50vh;
+	height:50vh;
+	overflow:hidden;
+}
+
+@mixin seventyFiveHeight {
+	min-height: 75vh;
+	height:75vh;
+	overflow:hidden;
+}
+
+@mixin fullHeight {
+	min-height: 100vh;
+	height:100vh;
+	overflow:hidden;
+}
+
+@mixin flexVertAlign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;	
+}
+
+@mixin Button {
+	font-family: $body-font;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+@mixin rightarrow {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  margin-left: 0.5em;     
+  vertical-align: middle;
+  line-height: 1em;  
+}
+
+@mixin dropShadow { 
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.4);
+}
+
+.dropShadow {
+  @include dropShadow;
+  transition:$slowEffect;
+}
+
+@mixin vignette {
+  box-shadow: inset 0 0 100px 10px hsla(0, 0%, 0%, 0.3);
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+}
+
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
+}
+
+
+
+
+
+

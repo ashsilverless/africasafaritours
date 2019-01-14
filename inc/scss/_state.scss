@@ -1,0 +1,143 @@
+/*! == STATE == */
+
+.fiftyHeight {
+	@include fiftyHeight;
+}
+
+.seventyFiveHeight {
+	@include seventyFiveHeight;
+}
+
+.fullHeight {
+	@include fullHeight;
+}
+
+.highlightBorderH,
+.highlightBorderV {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.highlightBorderH:before,
+.highlightBorderH:after {
+  @include psuedo;
+  width: 100%;
+  height: 2px;
+  background: hsl(0, 0%, 98%);;
+  top: 0;
+  left: 0;
+  z-index: 100;  
+  transform: scaleX(0); 
+  transition: transform 0.25s linear; 
+  transform-origin: left;
+}
+
+.highlightBorderH:after {
+  top: initial;
+  bottom: 0;
+  transform-origin: right;
+}
+
+.highlightBorderV:before,
+.highlightBorderV:after {
+  @include psuedo;
+  width: 2px;
+  height: 100%;
+  background: hsl(0, 0%, 98%);;
+  top: 0;
+  left: 0;
+  z-index: 100;  
+  transform: scaleY(0); 
+  transition: transform 0.25s linear; 
+  transform-origin: bottom;    
+}
+
+.highlightBorderV:after {
+  left: initial;
+  right: 0;
+  transform-origin: top;  
+}
+
+*:hover > .highlightBorderH {
+  cursor:pointer;
+  &:before,
+  &:after {
+   transform: scaleX(1);    
+  }
+  &:before {
+    transition-delay:0.25s; 
+  }
+  &:after {
+    transition-delay:0.75s; 
+  }  
+}  
+
+*:hover > .highlightBorderV {
+  cursor:pointer;  
+  &:before,
+  &:after {
+   transform: scaleY(1);  
+  }
+  &:after {
+       transition-delay:0.5s;   
+  }  
+}  
+
+.darkPanel {
+  position: relative;
+  z-index: 1;
+  &:after {
+  @include psuedo;
+  top:0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: hsl(322, 42%, 24%);
+  opacity:0;
+  transition:$slowEffect;
+  }
+}
+
+.darkPanelWrapper:hover > .darkPanel:after {
+  opacity:0.6;
+}
+
+.darkPanelWrapper:hover > .darkPanel:hover:after{
+  opacity:0;
+  cursor: pointer;
+}
+
+.darkPanel > * {
+  z-index: 10;
+}
+
+.desat:hover > .desat__item  {
+    filter: grayscale(80%);
+}
+
+.desat:hover > .desat__item:hover {
+    filter: grayscale(0);
+}
+
+
+.appearBlock {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 3s ease;  
+}
+
+.loaded .appearBlock {
+  opacity:1;
+  transform: translateY(0);  
+}
+
+
+
+
+
+
+
+
+
+

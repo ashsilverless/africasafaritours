@@ -1,0 +1,64 @@
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;  
+  transition: box-shadow 1s ease, background .5s ease;  
+  &.scrolled,
+  &.menuOpen {
+    background:$brand-tertiary;    
+    box-shadow: 0 30px 43px -22px hsla(0, 0%, 0%, 0.3);
+  }
+  &.scrolled {
+    height:3.3em;
+  }
+}
+
+main {
+  margin-top:66px;
+}
+
+.footer {
+  position: relative;
+  &__static {
+  position: relative;
+  height:9em;
+  width: 100%;
+  background: $brand-primary;
+  }
+  a {
+    color: $brand-primary;
+  }
+  p {
+    color: white;
+  }
+  &__inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 3em 1em;    
+  }
+  &__socket {
+    width:100%;
+    padding:1em 0 ;
+    background: $brand-tertiary;
+    font-size: 0.75em;
+    i {
+      margin-right: 1em;
+    }    
+    &__colophon {
+      text-align: center;
+      a {
+        margin-left:0.5em;
+        padding-left:0.5em;
+        border-left:1px solid $mid-grey;
+      }
+    }
+  }
+}
+
+
+
+.layoutBlock  {
+  margin-bottom: $largeMargin;
+}

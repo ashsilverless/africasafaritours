@@ -1,0 +1,177 @@
+/*! == BASE == */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5% /*This way, 1rem = 10px, making it easier to define my text-sizes through the document*/
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background:$brand-tertiary;
+	@include fontsize(20);
+	line-height: 1.3em;
+	font-family: $body-font;	
+	color: $brand-primary;
+}
+
+@media only screen and (max-width: 600px) {
+body {
+
+		}
+	}
+	
+p { 
+	color: $brand-primary;
+	font-family: $body-font;
+	margin:0;
+	margin-bottom: 1em;
+  font-weight:300;	
+  text-align: justify;
+}
+
+p strong,
+strong {
+  font-weight: 700;
+}
+
+a { 
+	color: $brand-secondary;
+	text-decoration: none;
+	&:hover {
+  	text-decoration: none;
+  	cursor: pointer;
+	}
+}
+
+ul {
+  list-style-type: none;
+  li{
+    
+  }
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	max-height: 100%;
+}
+
+i {
+  vertical-align: text-top;  
+}
+
+:focus {
+  outline: none;
+}
+
+.headingBrand { 
+	color: $brand-primary;
+  @include headingBrand;
+  &__sm {
+    font-size: 1em;    
+  }
+  &__md {
+    font-size: 1.5em;    
+  }
+  &__lg {
+    font-size: 2em;    
+  }
+    &__lgPlus {
+    font-size: 2.5em;    
+  }
+  &__xl {
+    font-size: 4em;
+  }
+  &__light {
+    color: white;
+  }
+}
+
+.headingSupporting { 
+	color: $brand-primary;
+  @include headingSupporting;
+  &__sm {
+    font-size: 0.8em;    
+  }
+  &__md {
+    font-size: 1em;    
+  }
+  &__lg {
+    font-size: 1.1em;    
+    line-height: 1.3em;
+  }
+  &__xl {
+    font-size: 1.5em;
+  }
+  &__light {
+    color: white;
+    text-shadow: 0 0 100px black; /*Move to separate selector?*/
+  }  
+  &__longForm {
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0.05em;
+  }
+  &__mediumWeight {
+    font-weight: 700;
+  }
+  &__lightWeight {
+    font-weight: 100;
+  }
+}
+
+.grid {
+  display: grid;
+  &__end {
+    align-self: end;
+  }
+}
+
+.mb0{
+  margin-bottom: 0 !important;
+}
+
+.mb05{
+  margin-bottom: 0.5em !important;
+}
+
+.mb1{
+  margin-bottom: 1em !important;
+}
+
+.mb2{
+  margin-bottom: 2em !important;
+}
+
+.mb3{
+  margin-bottom: 3em !important;
+}
+
+.mt1 {
+  margin-top:1em !important;
+}
+
+.mt2 {
+  margin-top:2em !important;
+}
+
+.mt3 {
+  margin-top:3em !important;
+}
+
+.text-center {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
