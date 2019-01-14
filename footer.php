@@ -34,6 +34,10 @@
       </div><!--socket-->
   
   </div><!--container-->    	
+  
+  <div class="chatWrapper">
+    CHAT
+  </div>
 </footer>
 
 </div><!-- #page -->
