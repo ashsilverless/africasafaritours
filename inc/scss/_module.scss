@@ -919,9 +919,11 @@ svg#vert-logo {
 .cardItinerary {
   display: grid;
   @include backgroundCover;  
+  @include dropShadow;
   grid-template-rows: 3em auto 3em;
   height:100%;
   padding: 1em;
+  transition: box-shadow 0.5s ease;
   &:before {
     @include childOverlay;
     background:hsla(0, 0%, 0%, 0.4);
@@ -929,6 +931,7 @@ svg#vert-logo {
     transition: opacity 0.5s ease;
   }
   &:hover {
+    box-shadow: none;
     &:before {
       opacity:1;
     }
@@ -971,6 +974,11 @@ svg#vert-logo {
         font-size: 1em;        
       }
     }
+  }
+  &__small {
+    width: 33.3%;
+    height: 12em;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
@@ -1139,6 +1147,30 @@ svg#vert-logo {
     margin-right: 1em;
     font-size: 0.8em;
     color: $brand-primary;
+  }
+}
+
+.findMore {
+  align-self: end;
+  margin-bottom: 0;
+  line-height: 0.75em;
+  font-size: 0.75em;
+  font-weight: 300;   
+  z-index: 10;  
+  color: white;
+  span {    
+    display: block;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: hsl(0, 0%, 100%);
+    &:after {
+      font-family: "Font Awesome 5 Free";
+      content: "\f105";
+      margin-left: 0.5em;
+      vertical-align: middle;
+      line-height: 1em;
+      font-size: 1em;        
+    }
   }
 }
 
