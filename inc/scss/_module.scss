@@ -1158,7 +1158,7 @@ svg#vert-logo {
   font-weight: 300;   
   z-index: 10;  
   color: white;
-  span {    
+  span {
     display: block;
     font-weight: 700;
     font-size: 1.2em;
@@ -1173,6 +1173,43 @@ svg#vert-logo {
     }
   }
 }
+
+.controls {
+  position: relative;
+}
+
+.locationFilter,
+.typeFilter {
+ position: absolute;
+  width: 100%;
+  transition: 0.5s opacity ease;
+  opacity: 0;
+  z-index: -1;
+  &.reveal {
+    opacity:1;
+    z-index: 100;
+  }
+}
+
+.button__filter {
+  display: inline-block;
+  margin:0 0.5em 1em;
+  padding:0.3em 2em;
+  background: transparent;
+  border:3px solid $brand-secondary;  
+  font-size: 0.75em;
+  line-height: 1em;
+  span {
+    display: block;
+    font-size: 0.75em;
+    line-height: 1em;
+  }
+  &.active {
+    background: $brand-secondary;
+    color: white;
+  }
+}
+
 
 /*===========FOOTER==========*/
 
