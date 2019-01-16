@@ -35,7 +35,7 @@
           the_title(); 
           } ?>
       </h1>
-  
+   
     <?php if( get_field('sub_heading') ): ?>
       <h2><?php the_field('sub_heading');?></h2>
     <?php endif; ?>
