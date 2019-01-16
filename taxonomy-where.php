@@ -156,7 +156,7 @@ $glanceInfo = get_sub_field('information', $term);
   <div class="row"><!--Seasons block -->
     
     <div class="col-lg-3 col-sm-4">
-            <h2 class="headingSupporting headingSupporting__lg mb2">Weather In <?php echo $term->name; ?></h2>
+            <h2 class="headingSupporting headingSupporting__lg mb2">Seasons In <?php echo $term->name; ?></h2>
     </div>
 
     <div class="col-lg-6 col-sm-8">
@@ -243,7 +243,7 @@ $glanceInfo = get_sub_field('information', $term);
 if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
       $campImg = get_field('leader_image');?>  
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-3 col-6">
           <a href="<?php the_permalink() ?>">
             <div class="cardCamp" style="background-image: url(<?php echo $campImg['url']; ?>);">
               <div class="highlightBorderH"></div>
@@ -299,7 +299,7 @@ if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
   <div class="row"><!--Seasons block -->
 
     <div class="col-lg-6 offset-lg-3">
-      <h2 class="headingSupporting headingSupporting__lg mb2">Weather In <?php echo $term->name; ?></h2>
+      <h2 class="headingSupporting headingSupporting__lg mb2">Seasons In <?php echo $term->name; ?></h2>
       <div class="layoutBlock season mt2">
       <?php
       
@@ -345,7 +345,7 @@ if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
 if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
       $campImg = get_field('leader_image');?>  
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-lg-3 col-6">
           <a href="<?php the_permalink() ?>">
             <div class="cardCamp" style="background-image: url(<?php echo $campImg['url']; ?>);">
               <div class="highlightBorderH"></div>

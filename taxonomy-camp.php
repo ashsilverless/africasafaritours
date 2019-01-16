@@ -160,7 +160,7 @@ $glanceInfo = get_sub_field('information', $term);
     </div>
 
     <div class="col-lg-6">
-      <h2 class="headingSupporting headingSupporting__lg mb2">Weather In <?php echo $term->name; ?></h2>
+      <h2 class="headingSupporting headingSupporting__lg mb2">Seasons In <?php echo $term->name; ?></h2>
       <div class="layoutBlock season mt2">
       <?php
       
@@ -262,7 +262,7 @@ $glanceInfo = get_sub_field('information', $term);
   <div class="row"><!--Seasons block -->
 
     <div class="col-lg-6 offset-lg-3">
-      <h2 class="headingSupporting headingSupporting__lg mb2">Weather In <?php echo $term->name; ?></h2>
+      <h2 class="headingSupporting headingSupporting__lg mb2">Seasons In <?php echo $term->name; ?></h2>
       <div class="layoutBlock season mt2">
       <?php
       

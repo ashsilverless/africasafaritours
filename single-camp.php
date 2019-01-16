@@ -54,7 +54,7 @@ $descr = get_field('description', $pageID); ?>
 
 <div class="col-lg-6 offset-lg-3">
   
-      <h2 class="headingSupporting headingSupporting__lg mb2">Weather In <?php the_title(); ?></h2>
+      <h2 class="headingSupporting headingSupporting__lg mb2">Seasons In <?php the_title(); ?></h2>
       <div class="layoutBlock season mt2">
  
       <?php
