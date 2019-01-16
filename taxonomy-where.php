@@ -64,7 +64,7 @@ $glanceInfo = get_sub_field('information', $term);
   <div class="row"><!--Descriptions block -->
     
     <div class="col-lg-3 col-sm-4">
-      <h2 class="headingSupporting headingSupporting__lg mb1-xs">CHECK Introduction to <?php echo $term->name; ?></h2>
+      <h2 class="headingSupporting headingSupporting__lg mb1-xs">Introduction to <?php echo $term->name; ?></h2>
     </div>
     
     <div class="col-lg-6 col-sm-8">
