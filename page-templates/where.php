@@ -6,13 +6,13 @@
  */
 get_header();?>
 
-    <div class="container">
+<div class="container">
 
     <div class="layoutBlock">
             
             <div class="row d-flex">		
  
-            <h1 class="headingBrand headingBrand__lgPlus text-center mb1 mt2">Where</h1> 
+                <h1 class="headingBrand headingBrand__lgPlus text-center mb1 mt2">Where</h1> 
     
                 <div class="col-6">
                 
@@ -4463,58 +4463,50 @@ get_header();?>
     
                 <div class="col-6">
 
-<div class="where-wrapper">
+                    <div class="where-wrapper">
                     
-			<?php $terms = get_terms( array(
-			    'taxonomy' => 'where',
-			    'parent'   => $term->term_id,
-			    'hide_empty' => false,
-			    'orderby' => 'term_order',
-				'order'     => 'ASC'
-			) );
-
-			foreach ( $terms as $term ): ?>
-			
-			<?php
-    			$bannerImage = get_field('banner_image', $term);
-    			$desc = get_field('description', $term);
-    			
-    			
-			?>
-				
-    <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" id="<?php echo $term->slug; ?>" class="cardCta cardCta__where" style="background-image: url(<?php echo $bannerImage['url']; ?>);">
-  		
-  		<div class="description">
-
-    		<h2 class="headingBrand headingBrand__md headingBrand__light mb1"><?php echo $term->name; ?></h2>
-  			<p><?php echo $desc;?></p>
-  		</div>
-  		
-  		<div class="link">  				
-  			<p>find out <span>more</span></p>
-  		</div>  				
-    				
-    </a>
-
-			
-			
-			<?php endforeach; ?>	              
-             
-                 
-             
-             
-             
-             
-             
-             
-</div><!--where-wrapper-->
+                    <?php $terms = get_terms( array(
+                        'taxonomy' => 'where',
+                        'parent'   => $term->term_id,
+                        'hide_empty' => false,
+                        'orderby' => 'term_order',
+                    	'order'     => 'ASC'
+                    ) );
+                    
+                    foreach ( $terms as $term ): 
+                    
+                    $bannerImage = get_field('banner_image', $term);
+                    $desc = get_field('description', $term);
+                    ?>
+                    
+                        <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" id="<?php echo $term->slug; ?>" class="cardCta cardCta__where" style="background-image: url(<?php echo $bannerImage['url']; ?>);">
+                        
+                        		<div class="description">
+                        
+                        		<h2 class="headingBrand headingBrand__md headingBrand__light mb1"><?php echo $term->name; ?></h2>
+                        		
+                        			<p><?php echo $desc;?></p>
+                        			
+                        		</div>
+                        
+                        		<div class="link">
+                          		  				
+                        			<p>find out <span>more</span></p>
+                        			
+                        		</div>  				
+                        
+                        </a>
+                    
+                    <?php endforeach; ?>	              
+                    
+                    </div><!--where-wrapper-->
                     
                 </div><!--col-->
     
             </div><!--r-->
             
-    </div>        
+        </div>        
         
     </div><!--container-->
     
-    <?php get_footer();?>
+<?php get_footer();?>

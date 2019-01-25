@@ -34,61 +34,11 @@ $(".toggle").click(function() {
     $(this).addClass("active");   
 });
 
-
 //ADD CLASS ON PAGE LOAD 
 
 $(document).ready(function( $ ) {
   $( ".toggle" ).first().addClass( "active" );
 });
-
-/* SMOOTH SCROOL TO ANCHOR 
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-*/
-
-/* ADD CLASS ON PAGE LOAD 
-
-$(document).ready(function( $ ) {
-
-$( "ul.nav li.nav-item" ).first().find('a').addClass( "active" );
-$( ".tab-pane" ).first().addClass( "active" );
-});
-*/
-
-/* GLOBAL OWL CAROUSEL SETTINGS 
-
-$('.sl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    navText: [" Previous", " Next"],
-	navClass: ['owl-prev', 'owl-next'],
-    dots:false,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:2,
-            nav:true
-        },
-        1000:{
-            items:4,
-            nav:true,
-            loop:true
-        }
-    }
-})*/
 
 /* CLASS AND FOCUS ON CLICK */
 
@@ -234,8 +184,6 @@ if($('#mixitup-posts-from-past').length) {
 
 //=========Where Map Toggle===========
 
-//=====================  
-
 $(document).ready(function( $ ) {
     $( "#botswana" ).addClass( "active" );
     $('#bot').addClass('highlight');
@@ -289,7 +237,6 @@ $('#tan').click(function() {
     $('.cardCta__where.active').removeClass('active'); 
     $('#tanzania').addClass('active'); 
 });
-
 
 });//Don't remove ---- end of jQuery wrapper
 
