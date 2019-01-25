@@ -232,6 +232,65 @@ if($('#mixitup-posts-from-past').length) {
     });
 }
 
+//=========Where Map Toggle===========
+
+//=====================  
+
+$(document).ready(function( $ ) {
+    $( "#botswana" ).addClass( "active" );
+    $('#bot').addClass('highlight');
+});
+
+$('#bot').click(function() {
+    $('.target').removeClass('highlight');
+    $(this).addClass('highlight');
+    $('.cardCta__where.active').removeClass('active'); 
+    $('#botswana').addClass('active'); 
+});
+
+$('#nam').click(function() {
+    $('.target').removeClass('highlight');
+    $(this).addClass('highlight');
+    $('.cardCta__where.active').removeClass('active'); 
+    $('#namibia').addClass('active'); 
+});
+
+$('#sou').click(function() {
+    $('.target').removeClass('highlight');
+    $(this).addClass('highlight');
+    $('.cardCta__where.active').removeClass('active'); 
+    $('#south-africa').addClass('active'); 
+});
+
+$('#zim').click(function() {
+    $('.target').removeClass('highlight');
+    $(this).addClass('highlight');
+    $('.cardCta__where.active').removeClass('active'); 
+    $('#zimbabwe').addClass('active'); 
+});
+
+$('#moz').click(function() {
+    $('.target').removeClass('highlight');
+    $(this).addClass('highlight');
+    $('.cardCta__where.active').removeClass('active'); 
+    $('#mozambique').addClass('active'); 
+});
+
+$('#sey-highlight').click(function() {
+    $('.target').removeClass('highlight');
+    $(this).addClass('highlight');
+    $('.cardCta__where.active').removeClass('active'); 
+    $('#seychelles').addClass('active'); 
+});
+
+$('#tan').click(function() {
+    $('.target').removeClass('highlight');
+    $(this).addClass('highlight');
+    $('.cardCta__where.active').removeClass('active'); 
+    $('#tanzania').addClass('active'); 
+});
+
+
 });//Don't remove ---- end of jQuery wrapper
 
 $(document).ready(function(){
