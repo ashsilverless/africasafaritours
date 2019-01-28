@@ -312,7 +312,15 @@ svg#vert-logo {
   padding-left: 25%;
   grid-gap: 5px;
 }
-  
+
+.cardCta__where {
+  height: 100%;
+}
+
+#where-map {
+    width: 70%;
+    margin: 0 auto;
+}  
 /*---FOOTER---*/
 
 .contactPanel__inner {

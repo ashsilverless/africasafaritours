@@ -14,7 +14,7 @@ get_header();?>
  
                 <h1 class="headingBrand headingBrand__lgPlus text-center mb1 mt2">Where</h1> 
     
-                <div class="col-6">
+                <div class="col-sm-6 d-flex mb2">
                 
                     <svg version="1.0" id="where-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     	 viewBox="0 0 502.5 435.8" enable-background="new 0 0 502.5 435.8" xml:space="preserve">
@@ -4461,7 +4461,7 @@ get_header();?>
     
                 </div>
     
-                <div class="col-6">
+                <div class="col-sm-6">
 
                     <div class="where-wrapper">
                     
