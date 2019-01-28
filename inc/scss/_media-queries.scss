@@ -16,6 +16,10 @@ body {
 }  
 /*---HEADER---*/ 
 
+.mobile-bg {
+    display: none;
+    }
+
 /*---CONTENT---*/
 
 /*---FOOTER---*/
@@ -315,6 +319,9 @@ svg#vert-logo {
 
 .cardCta__where {
   height: 100%;
+  background-image: none !important;
+  background-color: hsl(90, 14%, 89%);
+  align-content: start;
 }
 
 #where-map {
@@ -325,6 +332,16 @@ svg#vert-logo {
 .contactPanel__inner__chat {
   right: -0.5em;
   }
+
+.mobile-bg {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    filter: brightness(70%) saturate(50%);
+}
   
 /*---FOOTER---*/
 

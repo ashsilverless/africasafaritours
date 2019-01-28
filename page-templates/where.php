@@ -4481,6 +4481,8 @@ get_header();?>
                     
                         <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" id="<?php echo $term->slug; ?>" class="cardCta cardCta__where" style="background-image: url(<?php echo $bannerImage['url']; ?>);">
                         
+                                <div class="mobile-bg" style="background-image: url(<?php echo $bannerImage['url']; ?>);"></div>
+                            
                         		<div class="description">
                         
                         		<h2 class="headingBrand headingBrand__md headingBrand__light mb1"><?php echo $term->name; ?></h2>
