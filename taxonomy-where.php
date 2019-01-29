@@ -174,42 +174,37 @@ $glanceInfo = get_sub_field('information', $term);
     </div>
     
   </div><!--row-->    
+ 
+    <?php $post_objects = get_field('featured_itineraries', $term); ?>
+    
+    <?php if( $post_objects ): ?>
    
-    <div class="row"><!--Itinierary Block -->
-  
-  	<?php $post_objects = get_field('featured_itineraries', $term); ?>
-  
-  		<?php if( $post_objects ): ?>
-  
-    <div class="col-lg-3 col-sm-6">
-      <h2 class="headingSupporting headingSupporting__lg mb1">Itineraries featuring <?php echo $term->name; ?></h2>
-    </div>
-  </div><!--r-->
-
-
-  <div class="layoutBlock">		
-    <div class="row no-gutters darkPanelWrapper desat centerBootstrapCols"><!-- Other Months Block-->
-  
-  					    <?php foreach( $post_objects as $post): 
-    					        setup_postdata($post); 
-    					        $leaderImg = get_field('leader_image');
-  					    ?>
-
-              <a href="<?php the_permalink() ?>" class="cardItinerary cardItinerary__small darkPanel desat__item" style="background-image: url(<?php echo $leaderImg['url']; ?>);">
-           
-              <h4 class="headingBrand headingBrand__md headingBrand__light"><?php the_title() ?></h4>
-              <p class="findMore">find out<span>more</span></p>
-
-
-              </a><!--cardCamp-->
-
-  
-  
-  					    <?php endforeach; ?>
-  		<?php endif; ?>
-  
-  </div><!--r-->
-  </div>
+    <div class="layoutBlock">		
+    
+        <h2 class="headingSupporting headingSupporting__lg mb1">Itineraries featuring <?php echo $term->name; ?></h2>
+        
+        <div class="row no-gutters darkPanelWrapper desat centerBootstrapCols"><!-- Other Months Block-->
+        
+        <?php foreach( $post_objects as $post): 
+        setup_postdata($post); 
+        $leaderImg = get_field('leader_image');
+        ?>
+        
+            <a href="<?php the_permalink() ?>" class="cardItinerary cardItinerary__small darkPanel desat__item" style="background-image: url(<?php echo $leaderImg['url']; ?>);">
+            
+                <h4 class="headingBrand headingBrand__md headingBrand__light"><?php the_title() ?></h4>
+                
+                <p class="findMore">find out<span>more</span></p>
+            
+            </a><!--cardCamp-->
+        
+        <?php endforeach; ?>
+        
+        </div><!--r-->
+    
+    </div><!--layoutblock-->
+    
+    <?php endif; ?>
 
   <div class="row">
     <div class="col-lg-12">
