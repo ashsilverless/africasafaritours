@@ -4476,7 +4476,7 @@ get_header();?>
                     foreach ( $terms as $term ): 
                     
                     $bannerImage = get_field('banner_image', $term);
-                    $desc = get_field('description', $term);
+                    $desc = get_field('location_description', $term);
                     ?>
                     
                         <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" id="<?php echo $term->slug; ?>" class="cardCta cardCta__where" style="background-image: url(<?php echo $bannerImage['url']; ?>);">
