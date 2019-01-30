@@ -172,6 +172,41 @@ i {
   text-align: center;
 }
 
+.logo-holder {
+  position: absolute;
+  bottom:10px;
+  right: 20px;
+  z-index: 999999999999;
+  
+  #logo {
+    width:80px;
+    height:30px;
+  }
+  
+  #silverless {
+    opacity:0.6;
+    transition:opacity 0.5s ease-in-out;
+  }
+  
+  #created {
+    opacity:0;
+    transform: translateY(50px);
+    transition: 1s transform ease, 2s opacity ease;
+  }
+  
+  &:hover {
+    cursor:pointer;
+    
+    #silverless {
+      opacity:0.8;
+    }
+    
+    #created {
+      opacity:0.8;
+      transform: translateY(0);
+    }
+  }
+}
 
 
 
