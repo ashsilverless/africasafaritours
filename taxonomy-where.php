@@ -96,13 +96,13 @@ $glanceInfo = get_sub_field('information', $term);
   
   <div class="layoutBlock wrapper__cardCta darkPanelWrapper desat mt1">
 
-    <?php 
+    <?php
       foreach ( $termchildren as $child ) {
         $childterm = get_term_by( 'id', $child, $taxonomy_name );
         $childLeaderImg = get_field('leader_image', $childterm);  ?>
 
           <?php echo '<a href="' . get_term_link( $childterm->name, $taxonomy_name ) . '">';?>
-            <div class="cardCta darkPanel desat__item" style="background-image: url(<?php echo $childLeaderImg ['url'];?>);">
+            <div class="cardCta darkPanel desat__item dropShadow" style="background-image: url(<?php echo $childLeaderImg ['url'];?>);">
               <h3 class="headingBrand headingBrand__md headingBrand__light cardCta__heading"><?php echo $childterm->name; ?></h3>
               <p>find out <span>more</span></p>
             </div><!--cardCTA-->

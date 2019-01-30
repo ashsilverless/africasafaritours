@@ -353,7 +353,6 @@ svg#vert-logo {
 }
 
 .wrapper__cardCta {
-  @include dropShadow;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;  
   transition:$fastEffect;
