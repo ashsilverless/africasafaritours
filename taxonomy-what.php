@@ -149,7 +149,7 @@ $glanceInfo = get_sub_field('information', $term);
 
 <!-- OUTPUTTING CAMPS WITH THIS TAX ASSOC WITH IT-->
 
-<div id="mixitup-camps" class="mixitup-camps d-flex flex-wrap align-item-strech">
+<div id="mixitup-camps" class="mixitup-camps flex-wrap align-item-strech">
 
   <?php
   $taxonomy_name = get_queried_object()->taxonomy; // Get the name of the taxonomy
