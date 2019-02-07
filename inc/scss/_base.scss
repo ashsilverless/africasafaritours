@@ -18,7 +18,7 @@ body {
   background:$brand-tertiary;
 	@include fontsize(20);
 	line-height: 1.3em;
-	font-family: $body-font;	
+	font-family: $body-font;
 	color: $brand-primary;
 }
 
@@ -27,13 +27,13 @@ body {
 
 		}
 	}
-	
-p { 
+
+p {
 	color: $brand-primary;
 	font-family: $body-font;
 	margin:0;
 	margin-bottom: 1em;
-  font-weight:300;	
+  font-weight:300;
   text-align: justify;
 }
 
@@ -42,7 +42,7 @@ strong {
   font-weight: 700;
 }
 
-a { 
+a {
 	color: $brand-secondary;
 	text-decoration: none;
 	&:hover {
@@ -54,7 +54,7 @@ a {
 ul {
   list-style-type: none;
   li{
-    
+
   }
 }
 
@@ -65,27 +65,27 @@ img {
 }
 
 i {
-  vertical-align: text-top;  
+  vertical-align: text-top;
 }
 
 :focus {
   outline: none;
 }
 
-.headingBrand { 
+.headingBrand {
 	color: $brand-primary;
   @include headingBrand;
   &__sm {
-    font-size: 1em;    
+    font-size: 1em;
   }
   &__md {
-    font-size: 1.5em;    
+    font-size: 1.5em;
   }
   &__lg {
-    font-size: 2em;    
+    font-size: 2em;
   }
     &__lgPlus {
-    font-size: 2.5em;    
+    font-size: 2.5em;
   }
   &__xl {
     font-size: 4em;
@@ -95,17 +95,17 @@ i {
   }
 }
 
-.headingSupporting { 
+.headingSupporting {
 	color: $brand-primary;
   @include headingSupporting;
   &__sm {
-    font-size: 0.8em;    
+    font-size: 0.8em;
   }
   &__md {
-    font-size: 1em;    
+    font-size: 1em;
   }
   &__lg {
-    font-size: 1.1em;    
+    font-size: 1.1em;
     line-height: 1.3em;
   }
   &__xl {
@@ -114,7 +114,7 @@ i {
   &__light {
     color: white;
     text-shadow: 0 0 100px black; /*Move to separate selector?*/
-  }  
+  }
   &__longForm {
     font-weight: 700;
     text-transform: none;
@@ -177,36 +177,33 @@ i {
   bottom:10px;
   right: 20px;
   z-index: 999999999999;
-  
+
   #logo {
     width:80px;
     height:30px;
   }
-  
+
   #silverless {
     opacity:0.6;
     transition:opacity 0.5s ease-in-out;
   }
-  
+
   #created {
     opacity:0;
     transform: translateY(50px);
     transition: 1s transform ease, 2s opacity ease;
   }
-  
+
   &:hover {
     cursor:pointer;
-    
+
     #silverless {
       opacity:0.8;
     }
-    
+
     #created {
       opacity:0.8;
       transform: translateY(0);
     }
   }
 }
-
-
-
