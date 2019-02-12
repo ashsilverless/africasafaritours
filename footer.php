@@ -25,8 +25,8 @@
 
           <div class="col-lg-6 footer__socket__colophon">
           &copy; African Safari Tours <?php echo date ('Y');?>
-          <a href="">Terms</a>
-          <a href="">Privacy</a>
+          <a href="/terms-conditions">Terms</a>
+          <a href="/privacy">Privacy</a>
           </div>
 
         </div><!--row-->
